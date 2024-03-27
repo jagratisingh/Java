@@ -1,0 +1,122 @@
+1.import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    static long aVeryBigSum(long[] ar) {
+long sum=0;
+for(int i=0;i<ar.length;i++)
+{
+sum = sum+ ar[i];
+}
+return sum;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int arCount = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        long[] ar = new long[arCount];
+
+        String[] arItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < arCount; i++) {
+            long arItem = Long.parseLong(arItems[i]);
+            ar[i] = arItem;
+        }
+
+        long result = aVeryBigSum(ar);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
+
+        scanner.close();
+    }
+}
+
+
+3. import java.util.*
+ import java.lang.*;
+import java.io.*;
+class Jagrati
+{
+   public static void main(String[] args) throws java.lang.Exception
+{
+   BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))
+  try{
+    int testCases=bufferredRReader.readline().split(" ");
+int x=Integer.parseInt(testCase[1]);
+int p=Integer.parseInt(testCase[2])-1;
+int k=Integer.parseInt(testCase[3])-1;
+String[] inputs= bufferedReader.readline().split(" ");
+List.add(Integer.parseInt(string));
+for(String string : inputs){
+   list.add(Integer.parseInt(string));
+}
+Collections.sort(list);
+int numberOfOperations =0;
+int indexOfElement= list.indexOf(X);
+if(indexOfElement==-1){
+  list.set(k,X);
+numberOfOperations++;
+Collections.sort.(list);
+indexOFElement=list.indexOf(X);
+}
+else{
+ int lastindex= list.indexOF(X);
+if(indexOfElement !=lastIndex){
+  if(p>=lastIndex){
+    indexOfElement=lastIndex;
+}
+}
+while(true){
+if(list.get(p)==X){
+ System.out.println(0+ numberOfOperations);
+ break;
+}
+if(indexOfElement>p){
+  if(k>p){
+  System.out.println(-1);
+  break;
+}
+ else{
+System.out.println(indexOfElement -p + numberOFoperations);
+ break;
+}
+}
+if(indexOfElement <p){
+if(k<p){
+ System.out.println(-1);
+ break;
+}
+ else{
+  System.out.println(p - indexOfElement + numberOfOperations);
+  break;
+}
+}
+}
+}
+catch(Expection e){e.printStackTrace();}
+finally{
+ try{
+'  bufferredReader.close(0;
+}
+catch(IOExpection e){
+  e.printStackTrace();
+}
+
+}
+}
+}
